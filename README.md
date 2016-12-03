@@ -149,4 +149,14 @@ curl "127.0.0.1:9523/tpl/hello"
 
 curl "127.0.0.1:9523?op=tpl.hello"
 
+如果要执行定时任务，请在TplCtrl.php方法中加入以下代码：如
+
+```
+public function helloAction()
+    {
+ \Ping\SwooleTask\Base\App::$server->tick(10000, function ($id) {
+ echo 'run task';      
+        }); 
+    }
+```
 
