@@ -159,4 +159,5 @@ public function helloAction()
         }); 
     }
 ```
-
+###通过url查看服务状态
+curl "http://127.0.0.1:9523/?cmd=status"
